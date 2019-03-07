@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        
+        <title>Number Guesser</title>
+    </head>
+    <body>
+      <div class="title-container">
+        <div class="title">
+          <div class="first-word">Number</div>
+          <div class="second-word">Guesser</div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="player-information">
+          <input type="number" name="guess-number" id = 'number-input' min='0' max='100' placeholder="Enter your guess">
+          <div class="btn guess">Guess</div>
+          <div class="btn clear">Clear</div>
+          <div class="guess-information">
+            <div class="last-guess-info">Your last guess was</div>
+            <div class="last-guess-number">0</div>
+            <div class="last-guess-high-low">That was too high</div>
+          </div>
+          <div class="btn reset">Reset</div>
+        </div>
+      </div>
+      <script src="app.js"></script>
+    </body>
+</html>
