@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title-container {
+  position: fixed;
+  top 0;
+  width: 100%;
+  height: 100px;
+  background-color: #404041;
+}
+
+.title {
+  text-align: center;
+  left: 50%;
+  font-size: 80px;
+}
+
+.first-word {
+  display: inline-block;
+  color: #ED458B;
+}
+
+.second-word {
+  display: inline-block;
+  color: #E6E7E8;
+}
