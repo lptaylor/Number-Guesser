@@ -16,6 +16,12 @@
       </div>
       <div class="main-container">
         <div class="player-information">
+          <div class="min-max-selection">
+            <div class="min-max-label">Enter a minimum and maximum range for the number you want to guess</div>
+            <input type="number" name="min-range-selector" id='min-number' placeholder="Enter a minimum range for the number">
+            <input type="number" name="max-range-selector" id='max-number' placeholder="Enter a maximum range for the number">
+            <input type="submit" name="range-selector" id='submit-button' value="Submit">
+          </div>
           <div class="error">Not a valid guess</div>
           <input type="number" name="guess-number" id='number-input' min='0' max='100' placeholder="Enter your guess">
           <div class="btn guess">Guess</div>

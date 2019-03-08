@@ -1,5 +1,5 @@
-var hiddenNumber = Math.floor(Math.random() * 100) + 1
-
+var guessCounter = 0
+var hiddenNumber = null
 document.querySelector('.reset').addEventListener('mouseover', function (){
   document.querySelector('.reset').style.background = '#ED458B';
 })
@@ -34,12 +34,16 @@ document.querySelector('.guess').addEventListener('click', function () {
     if (validGuess > hiddenNumber) {
       document.querySelector('.last-guess-high-low').textContent = 'That was too high';
       document.querySelector('.last-guess-number').textContent = validGuess;
+      guessCounter += 1;
     } else if (validGuess < hiddenNumber) {
       document.querySelector('.last-guess-high-low').textContent = 'That was too low';
       document.querySelector('.last-guess-number').textContent = validGuess;
+      guessCounter += 1;
     } else {
       document.querySelector('.last-guess-high-low').textContent = 'BOOM';
       document.querySelector('.last-guess-number').textContent = validGuess;
+      guessCounter = 0;
+      rangeSelection();
     }}
 })
 
@@ -50,5 +54,30 @@ document.querySelector('.reset').addEventListener('click', function () {
 })
 
 document.querySelector('.clear').addEventListener('click', function () {
-  document.getElementById('number-input').value = ''
+  document.getElementById('number-input').value = '';
 })
+
+document.getElementById('submit-button').addEventListener('click', function () {
+      var validMin = parseInt(document.getElementById('min-number').value);
+      var validMax = parseInt(document.getElementById('max-number').value);
+    if (Number.isNaN(validMax) || Number.isNaN(validMax) || validMax <= validMin){
+      document.querySelector('.error').textContent = 'Not a valid range'
+      document.querySelector('.error').style.display = 'block'
+    } else {
+      document.getElementById('number-input').min = validMin;
+      document.getElementById('number-input').max = validMax;
+      hiddenNumber = Math.floor(Math.random() * (validMax - validMin) + validMin);
+      document.querySelector('.min-max-selection').style.display = 'none';
+      document.getElementById('min-number').style.display = 'none';
+      document.getElementById('max-number').style.display = 'none';
+      document.getElementById('submit-button').style.display = 'none';
+      document.querySelector('.error').style.display = 'none'
+    }
+  })
+
+function rangeSelection () {
+  document.querySelector('.min-max-selection').style.display = 'block';
+  document.getElementById('min-number').style.display = 'inline-block';
+  document.getElementById('max-number').style.display = 'inline-block';
+  document.getElementById('submit-button').style.display = 'inline-block';
+}

@@ -50,6 +50,32 @@
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  z-index: 2;
+}
+
+.min-max-selection {
+  text-align: center;
+  background: #ED458B;
+  position: absolute;
+  width: 50%;
+  height: 350px;
+  margin-top: 22.5%;
+  margin-left: 25%;
+  z-index: 1;
+}
+
+#min-number {
+  display: inline-block;
+  height: 50px;
+  width: 20%;
+  margin-top: 10px;
+}
+
+#max-number {
+  display: inline-block;
+  height: 50px;
+  width: 20%;
+  margin-top: 10px;
 }
 
 #number-input {
