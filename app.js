@@ -75,6 +75,22 @@ document.getElementById('submit-button').addEventListener('click', function () {
     }
   })
 
+// if (hiddenNumber === null) {
+//   document.querySelector(".clear").disabled = true;
+//   document.querySelector(".guess").disabled = true;
+//   document.querySelector(".reset").disabled = true;
+// } else {
+//   document.querySelector(".clear").disabled = false;
+//   document.querySelector(".guess").disabled = false;
+//   document.querySelector(".reset").disabled = false;
+// }
+//
+// if (document.getElementById('number-input').value === '') {
+//   document.querySelector(".clear").disabled = true;
+// } else {
+//   document.querySelector(".clear").disabled = false;
+// }
+
 function rangeSelection () {
   document.querySelector('.min-max-selection').style.display = 'block';
   document.getElementById('min-number').style.display = 'inline-block';
