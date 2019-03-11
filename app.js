@@ -75,6 +75,12 @@ document.getElementById('submit-button').addEventListener('click', function () {
     }
   })
 
+  function rangeSelection () {
+    document.querySelector('.min-max-selection').style.display = 'block';
+    document.getElementById('min-number').style.display = 'inline-block';
+    document.getElementById('max-number').style.display = 'inline-block';
+    document.getElementById('submit-button').style.display = 'inline-block';
+  }
 // if (hiddenNumber === null) {
 //   document.querySelector(".clear").disabled = true;
 //   document.querySelector(".guess").disabled = true;
@@ -90,10 +96,3 @@ document.getElementById('submit-button').addEventListener('click', function () {
 // } else {
 //   document.querySelector(".clear").disabled = false;
 // }
-
-function rangeSelection () {
-  document.querySelector('.min-max-selection').style.display = 'block';
-  document.getElementById('min-number').style.display = 'inline-block';
-  document.getElementById('max-number').style.display = 'inline-block';
-  document.getElementById('submit-button').style.display = 'inline-block';
-}
